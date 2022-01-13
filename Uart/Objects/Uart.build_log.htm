@@ -1,0 +1,211 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Le Linh, DUT, LIC=JL28G-V6GL9-RACDM-XULYC-1MV3L-FE9CA
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.32.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14.1
+Assembler:       Armasm.exe V6.14.1
+Linker/Locator:  ArmLink.exe V6.14.1
+Library Manager: ArmAr.exe V6.14.1
+Hex Converter:   FromElf.exe V6.14.1
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+E:\Desktop\Stm32\F407VGT6\Uart\Uart.uvprojx
+Project File Date:  01/13/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f407xx.s...
+main.c(44): warning: no previous extern declaration for non-static variable 'pUSART2' [-Wmissing-variable-declarations]
+USART_Config_t *pUSART2 = (USART_Config_t *)0x40004400;
+                ^
+main.c(44): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+USART_Config_t *pUSART2 = (USART_Config_t *)0x40004400;
+^
+main.c(45): warning: incompatible pointer types initializing 'GPIO_Config_t *' with an expression of type 'USART_Config_t *' [-Wincompatible-pointer-types]
+GPIO_Config_t *pGPIOA = (USART_Config_t *)0x40020000;
+               ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(45): warning: no previous extern declaration for non-static variable 'pGPIOA' [-Wmissing-variable-declarations]
+main.c(45): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GPIO_Config_t *pGPIOA = (USART_Config_t *)0x40020000;
+^
+main.c(46): warning: incompatible pointer types initializing 'SYSTICK_Config_t *' with an expression of type 'USART_Config_t *' [-Wincompatible-pointer-types]
+SYSTICK_Config_t *Systick = (USART_Config_t *)0xE000E010;
+                  ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(46): warning: no previous extern declaration for non-static variable 'Systick' [-Wmissing-variable-declarations]
+main.c(46): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+SYSTICK_Config_t *Systick = (USART_Config_t *)0xE000E010;
+^
+main.c(49): warning: no previous extern declaration for non-static variable 'pAHB1ENR' [-Wmissing-variable-declarations]
+uint32_t *pAHB1ENR = (uint32_t *)(0x40023800 + 0x30);
+          ^
+main.c(49): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t *pAHB1ENR = (uint32_t *)(0x40023800 + 0x30);
+^
+main.c(50): warning: no previous extern declaration for non-static variable 'pAPB1ENR' [-Wmissing-variable-declarations]
+uint32_t *pAPB1ENR = (uint32_t *)(0x40023800 + 0x40);
+          ^
+main.c(50): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t *pAPB1ENR = (uint32_t *)(0x40023800 + 0x40);
+^
+main.c(52): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void UART_Config();
+                ^
+                 void
+main.c(53): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void GPIO_Config();
+                ^
+                 void
+main.c(54): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+uint8_t USART2_ReceiveData();
+                          ^
+                           void
+main.c(58): warning: no previous extern declaration for non-static variable 'u8Buffer_Transmit' [-Wmissing-variable-declarations]
+uint8_t u8Buffer_Transmit[5] = "abcrt";
+        ^
+main.c(58): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t u8Buffer_Transmit[5] = "abcrt";
+^
+main.c(59): warning: no previous extern declaration for non-static variable 'u16Buffer_Transmit' [-Wmissing-variable-declarations]
+uint16_t u16Buffer_Transmit[5] = {5,6,7,8,9};
+         ^
+main.c(59): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t u16Buffer_Transmit[5] = {5,6,7,8,9};
+^
+main.c(60): warning: use of GNU empty initializer extension [-Wgnu-empty-initializer]
+uint8_t u8Buffer_Receive[10] = {};
+                               ^
+main.c(60): warning: no previous extern declaration for non-static variable 'u8Buffer_Receive' [-Wmissing-variable-declarations]
+uint8_t u8Buffer_Receive[10] = {};
+        ^
+main.c(60): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t u8Buffer_Receive[10] = {};
+^
+main.c(61): warning: no previous extern declaration for non-static variable 'Rx' [-Wmissing-variable-declarations]
+uint8_t Rx=0, Tx=0;
+        ^
+main.c(61): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Rx=0, Tx=0;
+^
+main.c(61): warning: no previous extern declaration for non-static variable 'Tx' [-Wmissing-variable-declarations]
+uint8_t Rx=0, Tx=0;
+              ^
+main.c(61): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Rx=0, Tx=0;
+^
+main.c(63): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main()
+^
+main.c(107): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pUSART2->CR1 &= ~(1<<12);
+                     ~~ ^~~~~~~~
+main.c(109): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pUSART2->CR1 &= ~(1<<10);
+                     ~~ ^~~~~~~~
+main.c(113): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pUSART2->CR1 &= ~(1<<15);
+                     ~~ ^~~~~~~~
+main.c(121): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pUSART2->CR3 &= ~(3<<8);
+                     ~~ ^~~~~~~
+main.c(99): warning: unused variable 'temp' [-Wunused-variable]
+        uint32_t temp;
+                 ^
+main.c(97): warning: no previous prototype for function 'UART_Config' [-Wmissing-prototypes]
+void UART_Config()
+     ^
+main.c(52): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void UART_Config();
+     ^
+                 void
+main.c(141): warning: if statement has empty body [-Wempty-body]
+        if(( pUSART2->SR >> 5 & 0x01 ) == 1);
+                                            ^
+main.c(141): note: put the semicolon on a separate line to silence this warning
+main.c(148): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pUSART2->SR &= ~(1<<5);
+                    ~~ ^~~~~~~
+main.c(139): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+void USART2_IRQHandler()
+     ^
+main.c(139): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART2_IRQHandler()
+^
+static 
+main.c(165): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        temp = (uint32_t)0b0111 << (4*2);
+                         ^
+main.c(166): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        pGPIOA->AFRL &= ~((uint32_t)0b1111 << (4*2));
+                                    ^
+main.c(169): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pGPIOA->OTYPER &= ~(1<<2);                              //output PP
+                       ~~ ^~~~~~~
+main.c(186): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        temp = (uint32_t)0b0111 << (4*3);
+                         ^
+main.c(187): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        pGPIOA->AFRL &= ~((uint32_t)0b1111 << (4*3));
+                                    ^
+main.c(190): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pGPIOA->OTYPER &= ~(1<<3);                              //output PP
+                       ~~ ^~~~~~~
+main.c(152): warning: no previous prototype for function 'GPIO_Config' [-Wmissing-prototypes]
+void GPIO_Config()
+     ^
+main.c(53): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void GPIO_Config();
+     ^
+                 void
+33 warnings generated.
+compiling main.c...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=776 RO-data=424 RW-data=16 ZI-data=1648  
+".\Objects\Uart.axf" - 0 Error(s), 33 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Linh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Linh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
